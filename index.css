@@ -8,7 +8,7 @@ body {
   
   /** Header styles **/
   .header {
-    background-image: url(https://images.unsplash.com/photo-1455267847942-f4fdb784f0c5?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb);
+    background-image:("https://yt3.ggpht.com/RF56-Elv1ynlrfoIBXhf_xl-svqAFVMvFiFpfAx2qENtIaoFqHWWByfy8K5ayUThRrV2yzSRyw=s600-c-k-c0x00ffffff-no-rj-rp-mo");
     height: 400px;
     background-position: center center;
   }

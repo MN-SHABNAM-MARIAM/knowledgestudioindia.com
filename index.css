@@ -8,7 +8,7 @@ body {
   
   /** Header styles **/
   .header {
-    background-image:("https://yt3.ggpht.com/RF56-Elv1ynlrfoIBXhf_xl-svqAFVMvFiFpfAx2qENtIaoFqHWWByfy8K5ayUThRrV2yzSRyw=s600-c-k-c0x00ffffff-no-rj-rp-mo");
+    background-image:url(https://yt3.ggpht.com/RF56-Elv1ynlrfoIBXhf_xl-svqAFVMvFiFpfAx2qENtIaoFqHWWByfy8K5ayUThRrV2yzSRyw=s600-c-k-c0x00ffffff-no-rj-rp-mo);
     height: 400px;
     background-position: center center;
   }

@@ -1,0 +1,180 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        
+        
+        
+    </head>
+    <body>
+       <h2> THE PLAYERS ARE EXPECTED TO OBTAIN A MIN OF 20 POINTS TO NOTCH UP THE GAME!! 🎁 </h2>
+        <div class="container">
+            <h1 id="message">Player 1 Turn</h1>
+            <div class="players">
+                <div id="player1">
+                    <h1>Score:
+                        <span id="player1Scoreboard">0</span>
+                    </h1>
+                    <div id="player1Dice" class="dice active">-</div>
+                </div>
+                <div id="player2">
+                    <h1>Score:
+                        <span id="player2Scoreboard">0</span>
+                    </h1>
+                    <div id="player2Dice" class="dice">-</div>
+                </div>
+            </div>
+
+            <button id="rollBtn">Roll Dice 🎲</button>
+            <button id="resetBtn">Reset Game 🔁</button>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
+
+<style>
+    html, body {
+    --color-1: #a8e6cf;
+    --color-2: #dcedc1;
+    --color-3: #ffd3b6;
+    --color-4: #ffaaa5;
+    --color-5: #ff8b94;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 50px;
+    background-image: linear-gradient(135deg, var(--color-3) , var(--color-5));
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    color: black;
+}
+
+.container {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: -2px 6px 18px 3px rgba(0,0,0,0.75);
+    padding: 50px;
+}
+
+.players {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.dice {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-3);
+    margin: 0 auto;
+    font-size: 80px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+
+button {
+    color: #fff;
+    padding: 20px 30px;
+    font-size: 20px;
+    margin: 40px auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#rollBtn {
+    background-color: var(--color-5);
+}
+
+#resetBtn {
+    background-color: var(--color-4);
+}
+
+button:focus {
+    outline: none;
+}
+
+#resetBtn {
+    display: none;
+}
+
+.active {
+    box-shadow: -2px 6px 18px 3px rgba(0,0,0,0.75);
+}
+</style>
+
+<script>
+    let player1Score = 0
+let player2Score = 0
+let player1Turn = true
+
+const player1Dice = document.getElementById("player1Dice")
+const player2Dice = document.getElementById("player2Dice")
+const player1Scoreboard = document.getElementById("player1Scoreboard")
+const player2Scoreboard = document.getElementById("player2Scoreboard")
+const message = document.getElementById("message")
+const rollBtn = document.getElementById("rollBtn")
+const resetBtn = document.getElementById("resetBtn")
+function showResetButton() {
+  rollBtn.style.display = "none"
+  resetBtn.style.display = "block"
+}
+ rollBtn.addEventListener("click", function () {
+  const randomNumber = Math.ceil(Math.random()*6)
+  if (player1Turn) {
+    player1Score += randomNumber
+    player1Scoreboard.textContent = player1Score
+    player1Dice.textContent = randomNumber
+    player1Dice.classList.remove("active")
+    player2Dice.classList.add("active")
+    message.textContent="PLAYER 2 TURN"
+  } else {
+    player2Score += randomNumber
+    player2Scoreboard.textContent = player2Score
+    player2Dice.textContent = randomNumber
+    player2Dice.classList.remove("active")
+    player1Dice.classList.add("active")
+    message.textContent = "PLAYER 1 TURN"
+  }
+  if (player1Score >= 20) {
+    message.textContent = "PLAYER 1 WON CONGRATULATIONS! 🎉 ✨  "
+    showResetButton()
+   
+  } else if (player2Score >= 20) {
+    message.textContent = "PLAYER 2 WON CONGRATULATIONS! 🎉 ✨"
+    showResetButton()
+  }
+  player1Turn = !player1Turn
+   
+
+})
+resetBtn.addEventListener("click", function () {
+  reset()
+})
+function reset() {
+  player1Score = 0
+  player2Score = 0
+  player1Turn = true
+
+  player1Scoreboard.textContent = 0
+  player2Scoreboard.textContent = 0
+  player1Dice.textContent = "-"
+  player2Dice.textContent = "-"
+  message.textContent="PLAYER 1 TURN"
+  resetBtn.style.display ="none"
+  rollBtn.style.display ="block"
+  player2Dice.classList.remove("active")
+  player1Dice.classList.add("active")
+}
+
+
+ 
+
+
+</script>

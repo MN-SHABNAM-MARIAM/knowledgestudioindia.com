@@ -2,16 +2,14 @@
 <html>
 <head>
   
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <div class="header">
 
   <style>
       .header {
           
-          padding: 6.25rem;
+          padding: 100px;
           text-align: center;
           background-image:url(https://yt3.ggpht.com/RF56-Elv1ynlrfoIBXhf_xl-svqAFVMvFiFpfAx2qENtIaoFqHWWByfy8K5ayUThRrV2yzSRyw=s600-c-k-c0x00ffffff-no-rj-rp-mo);
           color: white;
@@ -39,13 +37,13 @@ body {
   background-color: #111;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 3.75rem;
+  padding-top: 60px;
   
 }
 
 .sidenav a {
-  padding: 0.5rem 0.5rem 0.5rem 2rem;
-  font-size: 1.6rem;
+  padding: 8px 8px 8px 32px;
+  font-size: 25px;
   color: #818181;
   display: block;
   transition: 0.3s;
@@ -58,9 +56,9 @@ body {
 .sidenav .closebtn {
   position: absolute;
   top: 0;
-  right: 1.6rem;
-  font-size: 2.3rem;
-  margin-left: 3.1rem;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
 
@@ -72,7 +70,7 @@ body {
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="#">TOP </a>
   <a href="#">IMPORTANT SECTION </a>
-  <a href="#">CONTACT US </a>
+  <a href="#">CONTCT US </a>
   <a href="#">NEXT</a>
  
   
@@ -80,40 +78,34 @@ body {
 
   
 </div>
-
-
-<div class="topnav">
-  
+<nav>
+  <ul>
     <span> <a href="#TOP">TOP </a></span>
     <span> <a href="#CHANNEL LINK">CHANNEL LINK  </a></span>
     <span> <a href="#CONTACT US ">CONTACT US</a> </span>
       <span> <a href="next.html"> GAME PANEL </a> </span>
       <style> 
-      .topnav {text-align: center;
-          
-         background-color: white;
-       
+      ul {text-align: center;
+        
        text-transform: capitalize;
        word-spacing: 1px;
        text-orientation: sideways-right;
        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
        
       }
-      .topnav span:nth-child(odd) a{
+      ul span:nth-child(odd) a{
         color:green;
         font-size: 1.5em;
        font-weight: bold;
-       background-color: white;
       
       }
-      .topnav span:nth-child(even) a{
+      ul span:nth-child(even) a{
         color:crimson;
         font-size: 1.5em;
         font-weight: bold;
-        background-color: white;
       }
-        .topnav span :hover {
-        color:black;
+        ul span :hover {
+        background-color:white;
         font-style: italic;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
@@ -122,8 +114,8 @@ body {
       
       
 
-</div>
-
+  </ul>
+</nav>
 <style>
   * {
     box-sizing: border-box;
@@ -140,8 +132,10 @@ body {
   /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
   .navbar {
     overflow: hidden;
-    background-color: black;
-     top: 0;
+    background-color: #333;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
   }
   
   /* Style the navigation bar links */
@@ -150,7 +144,7 @@ body {
     display: block;
     color: white;
     text-align: center;
-    padding: 0.9rem 1.3rem;
+    padding: 14px 20px;
     text-decoration: none;
   }
   
@@ -159,7 +153,6 @@ body {
   .navbar a.right {
     float: right;
   }
- 
   
   /* Change color on hover */
   .navbar a:hover {
@@ -169,8 +162,8 @@ body {
   
   /* Active/current link */
   .navbar a.active {
-    background-color: grey;
-    color: black;
+    background-color: #666;
+    color: white;
   }
   
   /* Column container */
@@ -187,7 +180,7 @@ body {
     -ms-flex: 30%; /* IE10 */
     flex: 30%;
     background-color: #f1f1f1;
-    padding: 1.3rem;
+    padding: 20px;
   }
   
   /* Main column */
@@ -195,7 +188,7 @@ body {
     -ms-flex: 70%; /* IE10 */
     flex: 70%;
     background-color: white;
-    padding: 1.3rem;
+    padding: 20px;
     
   }
   
@@ -203,12 +196,12 @@ body {
   .fakeimg {
     background-color: #aaa;
     width: 100%;
-    padding: 1.3rem;
+    padding: 20px;
   }
   
   /* Footer */
   .footer {
-    padding: 1.3rem;
+    padding: 20px;
     text-align: center;
     background: #ddd;
   }
@@ -217,14 +210,8 @@ body {
   @media screen and (max-width: 700px) {
     .row {   
       flex-direction: column;
-    }}
-    @media screen and (max-width: 700px) {
-    .topnav {
-      flex-direction: column;
-    
+    }
   }
-  
- 
   
   /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
   @media screen and (max-width: 400px) {
@@ -233,17 +220,8 @@ body {
       width: 100%;
     }
   }
-  @media screen and (max-width: 400px) {
-  .topnav span{
-    float: left;
-      width: 100%;
-  }
-
-
-  }
-  
   </style>
-   <span style="font-family:fantasy;font-size: 1.9rem;font-style:bold;cursor: pointer;float:left; position:relative; top: 0rem;"  onclick="openNav()">&#9776;  👈 </span>
+   <span style="font-family:fantasy;font-size:30px;font-style:bold;cursor: pointer;float:left; top: -70px;"  onclick="openNav()">&#9776;  👈 </span>
   </head>
   <body>
   
@@ -257,7 +235,7 @@ body {
   
   <div  class="row">                                     
     <div class="side">
-      <h1> <u>IN YOU TUBE CHANNEL</u> </h1>
+      <h1>IN YOU TUBE CHANNEL </h1>
       <h2> PRESENT :</h2>  
       <div class="fakeimg"> <iframe src="https://www.youtube.com/embed/pKDcavVDhhs?autoplay=1&mute=1" width="100%" ></iframe> <span> <a href="https://www.youtube.com/watch?v=pKDcavVDhhs"> VIDEO LINK </a></span></div><br>
     <h2>  HAVE A POWERFUL MIND : </h2>
@@ -269,7 +247,7 @@ body {
       
     </div>                       
     <div  class="main">                                   
-      <h2> <b><u> KNOWLEDGE STUDIO INDIA </u></b></h2>
+      <h2>KNOWLEDGE STUDIO INDIA</h2>
        <p> <i> <b> ~THE PATH TO EMPOWER YOURSELF </p> </i> </b>
       <div class="fakeimg" > <iframe src= "https://www.youtube.com/embed/elRDjIgaLLs?autoplay=1&mute=1"   width="100%" height="500rem" ></iframe> <span> <a href="https://www.youtube.com/watch?v=elRDjIgaLLs&t=2s"> VIDEO LINK </a></span></div>
       <p><b>THE ABOVE VIDEO DEPICTS THE IMPORTANCE OF TIME </b></p>
@@ -286,32 +264,26 @@ body {
   <div id="CONTACT US" class="Footer">
    
     
-    <h2> <b> <u>SUBSCRIBE FOR MORE KNOWLEDGEABLE CONTENTS......!!!</b></u></h2>
-    <style>
-    body{
-    font-family: 'ABeeZee';font-size: 1em;}
-
-   h2{ font-size: 2em;
+    <h2> <b>SUBSCRIBE FOR MORE KNOWLEDGEABLE CONTENTS......!!!"</b></h2>
+    <style> h2{ font-size: 2em;
     font-weight: bold;
     
-    
+    font-family: Arial, Helvetica, sans-serif;
     color: purple;}
     </style>
-    
     <div id="CHANNEL LINK"> <a href="https://www.youtube.com/channel/UCGexov34xPuIssyjqvAloZA?sub_confirmation=1" style="display: flex;
     justify-content: center "height=30%"> CHANNEL LINK </a> </div>
     <br><a href="mailto:knowledgestudioindia77@gmail.com">FOR FURTHER QUERIES KINDLY DROP A MAIL @ knowledgestudioindia77@gmail.com  </br></a>
     <style>
       a:link, a:visited {
-          background-color: black;
-          color: white;
-          padding: 0.9rem 2rem;
+        background-color:black;
+        color: white;
+        padding: 14px 25px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 1rem;
         font-weight: bold;
-       
       }
       
       a:hover, a:active {
@@ -321,7 +293,7 @@ body {
       </head>
       <body>
       
-      <h2> <b><u>LIKE AND SHARE IF INTERESTED.</u></b></h2>
+      <h2> LIKE AND SHARE IF INTERESTED</h2>
       
      
       
@@ -340,7 +312,7 @@ body {
 
 <script>
 function openNav() {
-  document.getElementById("mySidenav").style.width = "16rem";
+  document.getElementById("mySidenav").style.width = "250px";
 }
 
 function closeNav() {

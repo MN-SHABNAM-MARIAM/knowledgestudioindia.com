@@ -79,22 +79,24 @@ body {
   
 </div>
 
-<div class="nav">
+
+<nav>
   <ul>
     <span> <a href="#TOP">TOP </a></span>
-    <span> <a href="#CHANNEL LINK">CHANNEL LINK </a></span>
+    <span> <a href="#CHANNEL LINK">CHANNEL LINK  </a></span>
     <span> <a href="#CONTACT US ">CONTACT US</a> </span>
       <span> <a href="next.html"> GAME PANEL </a> </span>
       <style> 
-      
-     
-
       ul {text-align: center;
-         text-transform: capitalize;
-         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      
-        
-         }
+          text-align-last:center;
+         text-justify: auto;
+       
+       text-transform: capitalize;
+       word-spacing: 1px;
+       text-orientation: sideways-right;
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       
+      }
       ul span:nth-child(odd) a{
         color:green;
         font-size: 1.5em;
@@ -111,15 +113,13 @@ body {
         font-style: italic;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
-      
-        
   
       </style>
       
       
 
   </ul>
-</div>
+</nav>
 
 <style>
   * {
@@ -137,7 +137,7 @@ body {
   /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
   .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: black;
      top: 0;
   }
   
@@ -166,7 +166,7 @@ body {
   
   /* Active/current link */
   .navbar a.active {
-    background-color: #666;
+    background-color: grey;
     color: black;
   }
   

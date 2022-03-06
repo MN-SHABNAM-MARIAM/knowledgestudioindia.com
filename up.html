@@ -23,7 +23,7 @@
   padding: 8px;
   margin-top: 7px;
   border-bottom: 1px solid #f1f1f1;
-  color:maroon;
+  color:black;
   font-family:'Lobster';
 }
 .main {
@@ -35,7 +35,7 @@
 .right {
   background-color: peachpuff;
   float: left;
-  width: 40%;
+  width: 30%;
   padding: 10px 15px;
   margin-top: 7px;
 }
@@ -100,11 +100,13 @@ p{
     </p>
     <img src="https://yt3.ggpht.com/RF56-Elv1ynlrfoIBXhf_xl-svqAFVMvFiFpfAx2qENtIaoFqHWWByfy8K5ayUThRrV2yzSRyw=s600-c-k-c0x00ffffff-no-rj-rp-mo" style="width:100%">
   </div>
+  <div class="footer">
 
-  <div class="right">
+
+    
     <div class="carousel">
       <div class="carousel-item carousel-item-visible">
-          <img src="https://res.cloudinary.com/teepublic/image/private/s--oiIZu-uO--/t_Resized%20Artwork/c_fit,g_north_west,h_954,w_954/co_000000,e_outline:48/co_000000,e_outline:inner_fill:48/co_ffffff,e_outline:48/co_ffffff,e_outline:inner_fill:48/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1575272840/production/designs/6988534_0.jpg">
+          <img src="https://www.sibtayn.com/en/images/stories/other/knowledge.jpg">
           
 
       </div>
@@ -130,6 +132,14 @@ p{
                   <button id="carousel-button-next" aria-label=" next slide"> </button>
 
       </div>
+      <div class="footer">
+
+
+        <div style="background-color:white;text-align:center;padding:10px;margin-top:7px;font-size :2rem;"><div id="CHANNEL LINK"> <a href="https://www.youtube.com/channel/UCGexov34xPuIssyjqvAloZA?sub_confirmation=1" style="display: flex;
+          justify-content: center "height=30%"> CHANNEL LINK </a> </div> </div>
+          
+        </div>
+     
       </div>
       <style>
         body {
@@ -139,6 +149,7 @@ p{
 .carousel {
     max-width: 600px;
     position: relative;
+    float:right;
 }
 
 .carousel .carousel-item {
@@ -147,7 +158,6 @@ p{
 
 .carousel .carousel-item-visible {
     display: block;
-    
 }
 
 .carousel .carousel-actions {
@@ -160,13 +170,13 @@ p{
 
 .carousel .carousel-item img {
     width: 100%;
-    max-width: 600px;
-    height: auto;
+    max-width: 500px;
+    height: 400px;
 }
 
 .carousel .carousel-actions button {
     border-radius: 50px;
-    background-color:crimson;
+    background-color: white;
     border: 0;
     font-size: 16px;
     font-weight: bold;
@@ -177,8 +187,6 @@ p{
 
 #carousel-button-prev {
     margin-left: 20px;
-    
-    
 }
 
 #carousel-button-next {
@@ -191,7 +199,9 @@ p{
       <script>
         
 
-const slides = document.getElementsByClassName("carousel-item")
+
+
+        const slides = document.getElementsByClassName("carousel-item")
 let slidePosition = 0
 const totalSlides = slides.length
 
@@ -222,15 +232,13 @@ document.getElementById("carousel-button-next").addEventListener("click", moveTo
 document.getElementById("carousel-button-prev").addEventListener("click", moveToPrevSlide)
 
 console.log(totalSlides)
+</script>
 
 
 
-      </script>
+      
 
-<div style="background-color:white;text-align:center;padding:10px;margin-top:7px;font-size :2rem;"><div id="CHANNEL LINK"> <a href="https://www.youtube.com/channel/UCGexov34xPuIssyjqvAloZA?sub_confirmation=1" style="display: flex;
-  justify-content: center "height=30%"> CHANNEL LINK </a> </div> </div>
-  
- 
+      
 
 </body>
 </html>
